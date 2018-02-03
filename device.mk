@@ -125,7 +125,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8953 \
     libmm-qcamera \
-	Camera2
+    Camera2
 
 PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
@@ -144,6 +144,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl
+
+# Charger images
+PRODUCT_PACKAGES += \
+    charger_res_images
 
 # Display
 PRODUCT_PACKAGES += \
