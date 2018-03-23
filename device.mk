@@ -29,6 +29,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
+# World APN list
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -60,6 +64,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.print.xml:system/etc/permissions/android.software.print.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
+
+# Updater
+#PRODUCT_PACKAGES += \
+#    Updater
 
 # ANT
 #PRODUCT_PACKAGES += \
