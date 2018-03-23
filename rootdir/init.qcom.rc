@@ -402,6 +402,10 @@ on post-fs-data
     #Create FTM_AP dir for factory test
     mkdir /data/FTM_AP 0775 system system
 
+    # Create an additional OTA package directory that unlike
+    # /data/ota_package will not be touched by GmsCore.
+    mkdir /data/fmo_updates 0770 system cache
+
 on property:hw.fm.init=*
     write /sys/module/radio_iris_transport/parameters/fmsmd_set ${hw.fm.init}
 
