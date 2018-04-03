@@ -66,8 +66,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
 # Updater
-#PRODUCT_PACKAGES += \
-#    Updater
+PRODUCT_PACKAGES += \
+    Updater
 
 # ANT
 #PRODUCT_PACKAGES += \
