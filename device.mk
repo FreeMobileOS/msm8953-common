@@ -373,3 +373,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
+
+# fmo changes
+include vendor/fmo/config.mk
