@@ -398,6 +398,7 @@ etc/permissions/telephonyservice.xml
 -framework/telephony-ext.jar
 lib64/libparam.so
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+vendor/bin/ATFWD-daemon
 vendor/bin/hw/rild
 vendor/bin/ipacm-diag
 vendor/bin/netmgrd
