@@ -391,10 +391,10 @@ vendor/lib64/libsmemlog.so
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
 etc/permissions/telephonyservice.xml
--framework/QtiTelephonyServicelibrary.jar
+framework/QtiTelephonyServicelibrary.jar
 -framework/qcnvitems.jar
--framework/qcrilhook.jar
--framework/qti-telephony-common.jar
+framework/qcrilhook.jar
+framework/qti-telephony-common.jar
 -framework/telephony-ext.jar
 lib64/libparam.so
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
