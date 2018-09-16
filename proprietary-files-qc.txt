@@ -66,7 +66,8 @@ vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/bin/btnvtool
 vendor/bin/hci_qcomm_init
 vendor/bin/wcnss_filter
-vendor/lib64/libbtnv.so
+-vendor/lib/libbtnv.so
+-vendor/lib64/libbtnv.so
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/libbt-hidlclient.so
