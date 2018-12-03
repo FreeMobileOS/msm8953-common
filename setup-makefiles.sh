@@ -20,6 +20,7 @@ set -e
 
 DEVICE=mido
 VENDOR=xiaomi
+DEVICE_COMMON=msm8953-common
 
 INITIAL_COPYRIGHT_YEAR=2017
 
@@ -27,24 +28,10 @@ INITIAL_COPYRIGHT_YEAR=2017
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-LINEAGE_ROOT="$MY_DIR"/../../..
+FMO_ROOT="$MY_DIR"/../../..
 
-HELPER="$LINEAGE_ROOT"/vendor/lineage/build/tools/extract_utils.sh
-if [ ! -f "$HELPER" ]; then
-    echo "Unable to find helper script at $HELPER"
-    exit 1
-fi
-. "$HELPER"
+MIDO_BLOB_ROOT="$FMO_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
 
-# Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
+patchelf --replace-needed android.hardware.gnss@1.0.so android.hardware.gnss@1.0-v27.so $MIDO_BLOB_ROOT/vendor/lib64/vendor.qti.gnss@1.0_vendor.so
+patchelf --replace-needed android.hardware.gnss@1.0.so android.hardware.gnss@1.0-v27.so $MIDO_BLOB_ROOT/lib64/vendor.qti.gnss@1.0.so
 
-# Copyright headers and guards
-write_headers
-
-write_makefiles "$MY_DIR"/proprietary-files.txt
-echo "" >> "$PRODUCTMK"
-write_makefiles "$MY_DIR"/proprietary-files-qc.txt
-
-# Finish
-write_footers
