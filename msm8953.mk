@@ -67,7 +67,7 @@ PRODUCT_PACKAGES += \
     Updater
 
 # ANT
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     AntHalService \
     com.dsi.ant.antradio_library \
     libantradio
